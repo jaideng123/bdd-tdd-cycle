@@ -1,0 +1,2304 @@
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateMovies (20111119180638)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (62.7ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (57.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (66.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (57.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120130161449')[0m
+  [1m[35m (40.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (70.7ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (74.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (75.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (43.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120130161449')[0m
+  [1m[35m (41.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateMovies (20111119180638)
+Migrating to AddDirectorColumnToMovies (20160331145531)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "movies" ADD "director" varchar(255)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20160331145531')[0m
+  [1m[35m (45.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (62.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (74.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (2.8ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateMovies (20111119180638)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20111119180638')[0m
+  [1m[35m (73.5ms)[0m  commit transaction
+Migrating to AddDirectorColumnToMovies (20160331145531)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "movies" ADD "director" varchar(255)
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20160331145531')[0m
+  [1m[35m (50.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (70.4ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (74.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (65.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (63.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (81.7ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (73.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (74.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (66.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (67.4ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (74.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (74.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (55.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (59.3ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (67.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (74.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (56.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (67.8ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (57.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (59.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (56.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (57.2ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (57.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (66.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (57.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (41.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (69.2ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (73.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (74.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (56.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (68.1ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (57.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (57.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (39.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (60.6ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (57.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (57.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (37.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (77.5ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (57.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (57.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (54.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (61.2ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (57.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (57.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (37.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (80.1ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (65.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (65.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (41.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (0.9ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (66.2ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (74.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (74.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (56.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (67.3ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (57.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (65.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (45.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.7ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (72.9ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (67.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (74.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (50.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (74.6ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (66.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (65.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (42.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (76.5ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (75.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (74.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (54.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (61.5ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (73.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (74.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (55.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (69.6ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (73.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (74.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (56.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (78.5ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (74.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (75.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (47.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (68.5ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (127.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (79.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (60.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (45.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (70.0ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (73.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (74.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (58.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (69.4ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (81.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (82.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (57.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-31 11:13:11 -0500
+Connecting to database specified by database.yml
+
+ActionController::RoutingError (No route matches [GET] "/"):
+  actionpack (3.2.18) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.18) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.18) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.18) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.18) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.18) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.18) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.18) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.18) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.18) lib/rails/engine.rb:484:in `call'
+  railties (3.2.18) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.18) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/jaideng123/.rvm/rubies/ruby-1.9.3-p547/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/jaideng123/.rvm/rubies/ruby-1.9.3-p547/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/jaideng123/.rvm/rubies/ruby-1.9.3-p547/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/jaideng123/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.9ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-03-31 11:13:23 -0500
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (4.8ms)
+Compiled application.css  (0ms)  (pid 10688)
+Compiled jquery.js  (26ms)  (pid 10688)
+Compiled jquery_ujs.js  (0ms)  (pid 10688)
+Compiled application.js  (38ms)  (pid 10688)
+Completed 200 OK in 157.8ms (Views: 88.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-31 11:13:23 -0500
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-31 11:13:23 -0500
+Served asset /jquery.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-31 11:13:23 -0500
+Served asset /jquery_ujs.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-31 11:13:23 -0500
+Served asset /application.js - 200 OK (4ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2016-03-31 11:13:26 -0500
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (18.8ms)
+Completed 200 OK in 24.9ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/movies" for 127.0.0.1 at 2016-03-31 11:13:36 -0500
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fDt5SPOAeWZ1oMWy3gzdqTbzF/4aDFjeNOg8RwIYuaA=", "movie"=>{"title"=>"Shamu", "director"=>"Leo", "rating"=>"G", "release_date(1i)"=>"2016", "release_date(2i)"=>"3", "release_date(3i)"=>"31"}, "commit"=>"Save Changes"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (33.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 31 Mar 2016 16:13:36 UTC +00:00], ["description", nil], ["director", "Leo"], ["rating", "G"], ["release_date", Thu, 31 Mar 2016 00:00:00 UTC +00:00], ["title", "Shamu"], ["updated_at", Thu, 31 Mar 2016 16:13:36 UTC +00:00]]
+  [1m[35m (65.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies
+Completed 302 Found in 112.2ms (ActiveRecord: 99.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-03-31 11:13:36 -0500
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 11.3ms (Views: 8.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2016-03-31 11:13:38 -0500
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 7.1ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/movies" for 127.0.0.1 at 2016-03-31 11:13:43 -0500
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fDt5SPOAeWZ1oMWy3gzdqTbzF/4aDFjeNOg8RwIYuaA=", "movie"=>{"title"=>"Whale", "director"=>"Leo", "rating"=>"G", "release_date(1i)"=>"2016", "release_date(2i)"=>"3", "release_date(3i)"=>"31"}, "commit"=>"Save Changes"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 31 Mar 2016 16:13:43 UTC +00:00], ["description", nil], ["director", "Leo"], ["rating", "G"], ["release_date", Thu, 31 Mar 2016 00:00:00 UTC +00:00], ["title", "Whale"], ["updated_at", Thu, 31 Mar 2016 16:13:43 UTC +00:00]]
+  [1m[35m (137.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies
+Completed 302 Found in 142.0ms (ActiveRecord: 138.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-03-31 11:13:43 -0500
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 12.6ms (Views: 10.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2016-03-31 11:13:48 -0500
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered movies/show.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 8.1ms (Views: 6.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/1/similar" for 127.0.0.1 at 2016-03-31 11:13:53 -0500
+Processing by MoviesController#similar as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 31.3ms
+
+ActionView::MissingTemplate (Missing template movies/similar, application/similar with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee, :haml]}. Searched in:
+  * "/home/jaideng123/bdd-tdd-cycle/rottenpotatoes/app/views"
+):
+  actionpack (3.2.18) lib/action_view/path_set.rb:58:in `find'
+  actionpack (3.2.18) lib/action_view/lookup_context.rb:122:in `find'
+  actionpack (3.2.18) lib/action_view/renderer/abstract_renderer.rb:3:in `find_template'
+  actionpack (3.2.18) lib/action_view/renderer/template_renderer.rb:34:in `determine_template'
+  actionpack (3.2.18) lib/action_view/renderer/template_renderer.rb:10:in `render'
+  actionpack (3.2.18) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.18) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.18) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.18) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.18) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.18) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.18) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.18) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.18) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.18) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.18) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /home/jaideng123/.rvm/rubies/ruby-1.9.3-p547/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.18) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.18) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.18) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.18) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.18) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.18) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.18) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.18) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.18) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.18) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.18) lib/active_support/callbacks.rb:414:in `_run__1011849770941971977__process_action__2314305928765255267__callbacks'
+  activesupport (3.2.18) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.18) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.18) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.18) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.18) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.18) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.18) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.18) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.18) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.18) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.18) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.18) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.18) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.18) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.18) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.18) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.18) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.18) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.18) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.18) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.18) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  actionpack (3.2.18) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.18) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.18) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.18) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.18) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.18) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.18) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.18) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.18) lib/active_support/callbacks.rb:405:in `_run__1929697730990853836__call__822480181570132547__callbacks'
+  activesupport (3.2.18) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.18) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.18) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.18) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.18) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.18) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.18) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.18) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.18) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.18) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.18) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.18) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.18) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.18) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.18) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.18) lib/rails/engine.rb:484:in `call'
+  railties (3.2.18) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.18) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/jaideng123/.rvm/rubies/ruby-1.9.3-p547/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/jaideng123/.rvm/rubies/ruby-1.9.3-p547/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/jaideng123/.rvm/rubies/ruby-1.9.3-p547/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/jaideng123/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.4ms)
+
+
+Started GET "/movies/1/similar" for 127.0.0.1 at 2016-03-31 11:14:43 -0500
+Processing by MoviesController#similar as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered movies/similar.html.haml within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 11.1ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    5:   = hidden_field_tag "title_sort", true if @title_header
+    6:   = hidden_field_tag ":release_date_sort", true if @date_header
+    7:   Include: 
+    8:   - @all_ratings.each do |rating|
+    9:     = rating
+    10:     = check_box_tag "ratings[#{rating}]", 1, @selected_ratings.include?(rating), :id => "ratings_#{rating}"
+    11:   = submit_tag 'Refresh', :id => 'ratings_submit'
+  app/views/movies/similar.html.haml:8:in `block in _app_views_movies_similar_html_haml___2989894871496188970_70240303717780'
+  app/views/movies/similar.html.haml:4:in `_app_views_movies_similar_html_haml___2989894871496188970_70240303717780'
+
+
+  Rendered /home/jaideng123/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /home/jaideng123/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/jaideng123/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.6ms)
+
+
+Started GET "/movies/1/similar" for 127.0.0.1 at 2016-03-31 11:15:10 -0500
+Processing by MoviesController#similar as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 5.9ms
+
+NoMethodError (undefined method `similar' for #<Movie:0x007fc4300be978>):
+  app/controllers/movies_controller.rb:69:in `similar'
+
+
+  Rendered /home/jaideng123/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /home/jaideng123/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/jaideng123/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.3ms)
+
+
+Started GET "/movies/1/similar" for 127.0.0.1 at 2016-03-31 11:15:30 -0500
+Processing by MoviesController#similar as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 10.5ms
+
+NameError (undefined local variable or method `product' for #<Class:0x007fc43085eca0>):
+  app/models/movie.rb:9:in `similar'
+  app/controllers/movies_controller.rb:69:in `similar'
+
+
+  Rendered /home/jaideng123/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /home/jaideng123/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /home/jaideng123/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.9ms)
+
+
+Started GET "/movies/1/similar" for 127.0.0.1 at 2016-03-31 11:15:50 -0500
+Processing by MoviesController#similar as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered movies/similar.html.haml within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 14.3ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    5:   = hidden_field_tag "title_sort", true if @title_header
+    6:   = hidden_field_tag ":release_date_sort", true if @date_header
+    7:   Include: 
+    8:   - @all_ratings.each do |rating|
+    9:     = rating
+    10:     = check_box_tag "ratings[#{rating}]", 1, @selected_ratings.include?(rating), :id => "ratings_#{rating}"
+    11:   = submit_tag 'Refresh', :id => 'ratings_submit'
+  app/views/movies/similar.html.haml:8:in `block in _app_views_movies_similar_html_haml___2989894871496188970_70240303717780'
+  app/views/movies/similar.html.haml:4:in `_app_views_movies_similar_html_haml___2989894871496188970_70240303717780'
+
+
+  Rendered /home/jaideng123/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /home/jaideng123/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/jaideng123/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.2ms)
+
+
+Started GET "/movies/1/similar" for 127.0.0.1 at 2016-03-31 11:16:24 -0500
+Processing by MoviesController#similar as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (director = '%Leo%')[0m
+  Rendered movies/similar.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 55.3ms (Views: 41.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-31 11:16:24 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-31 11:16:24 -0500
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-31 11:16:24 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-31 11:16:24 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/movies/1/similar" for 127.0.0.1 at 2016-03-31 11:17:14 -0500
+Processing by MoviesController#similar as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (director = '%Leo%')[0m
+  Rendered movies/similar.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 21.1ms (Views: 7.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-31 11:17:14 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-31 11:17:14 -0500
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-31 11:17:14 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-31 11:17:14 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/1/similar" for 127.0.0.1 at 2016-03-31 11:17:28 -0500
+Connecting to database specified by database.yml
+Processing by MoviesController#similar as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE (director = '%Leo%')
+  Rendered movies/similar.html.haml within layouts/application (8.4ms)
+Completed 200 OK in 153.3ms (Views: 76.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-31 11:17:28 -0500
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-31 11:17:28 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-31 11:17:28 -0500
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-31 11:17:28 -0500
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/movies/1/similar" for 127.0.0.1 at 2016-03-31 11:18:28 -0500
+Processing by MoviesController#similar as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE (director = 'Leo')
+  Rendered movies/similar.html.haml within layouts/application (7.6ms)
+Completed 200 OK in 29.0ms (Views: 13.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-31 11:18:28 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-31 11:18:28 -0500
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-31 11:18:28 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-31 11:18:28 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/movies/1/similar" for 127.0.0.1 at 2016-03-31 11:20:07 -0500
+Processing by MoviesController#similar as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE (director = 'Leo')
+  Rendered movies/similar.html.haml within layouts/application (6.9ms)
+Completed 200 OK in 15.0ms (Views: 12.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-31 11:20:07 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-31 11:20:07 -0500
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-31 11:20:07 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-31 11:20:07 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2016-03-31 11:20:14 -0500
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered movies/show.html.haml within layouts/application (32.1ms)
+Completed 500 Internal Server Error in 37.1ms
+
+ActionView::Template::Error (undefined method `_similar_movie_path' for #<#<Class:0x007fa8f82403f8>:0x007fa904b4e628>):
+    16: 
+    17: = link_to 'Edit', edit_movie_path(@movie)
+    18: = button_to 'Delete', movie_path(@movie), :method => :delete, :confirm => 'Are you sure?'
+    19: = button_to 'Find Movies With Same Director', _similar_movie_path(@movie)
+    20: = link_to 'Back to movie list', movies_path
+  app/views/movies/show.html.haml:19:in `_app_views_movies_show_html_haml___1835247721433299152_70181946798820'
+
+
+  Rendered /home/jaideng123/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/_trace.erb (32.9ms)
+  Rendered /home/jaideng123/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/jaideng123/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (42.4ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2016-03-31 11:20:21 -0500
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered movies/show.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 8.5ms (Views: 7.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-31 11:20:21 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-31 11:20:21 -0500
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-31 11:20:21 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-31 11:20:21 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/movies/1/similar" for 127.0.0.1 at 2016-03-31 11:20:23 -0500
+
+ActionController::RoutingError (No route matches [POST] "/movies/1/similar"):
+  actionpack (3.2.18) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.18) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.18) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.18) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.18) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.18) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.18) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.18) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.18) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.18) lib/rails/engine.rb:484:in `call'
+  railties (3.2.18) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.18) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/jaideng123/.rvm/rubies/ruby-1.9.3-p547/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/jaideng123/.rvm/rubies/ruby-1.9.3-p547/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/jaideng123/.rvm/rubies/ruby-1.9.3-p547/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/jaideng123/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started POST "/movies/1/similar" for 127.0.0.1 at 2016-03-31 11:20:43 -0500
+
+ActionController::RoutingError (No route matches [POST] "/movies/1/similar"):
+  actionpack (3.2.18) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.18) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.18) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.18) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.18) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.18) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.18) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.18) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.18) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.18) lib/rails/engine.rb:484:in `call'
+  railties (3.2.18) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.18) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/jaideng123/.rvm/rubies/ruby-1.9.3-p547/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/jaideng123/.rvm/rubies/ruby-1.9.3-p547/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/jaideng123/.rvm/rubies/ruby-1.9.3-p547/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/jaideng123/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started POST "/movies/1/similar" for 127.0.0.1 at 2016-03-31 11:20:45 -0500
+
+ActionController::RoutingError (No route matches [POST] "/movies/1/similar"):
+  actionpack (3.2.18) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.18) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.18) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.18) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.18) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.18) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.18) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.18) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.18) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.18) lib/rails/engine.rb:484:in `call'
+  railties (3.2.18) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.18) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/jaideng123/.rvm/rubies/ruby-1.9.3-p547/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/jaideng123/.rvm/rubies/ruby-1.9.3-p547/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/jaideng123/.rvm/rubies/ruby-1.9.3-p547/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/jaideng123/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2016-03-31 11:20:50 -0500
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered movies/show.html.haml within layouts/application (6.1ms)
+Completed 200 OK in 14.5ms (Views: 12.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-31 11:20:50 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-31 11:20:50 -0500
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-31 11:20:50 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-31 11:20:50 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/movies/1/similar" for 127.0.0.1 at 2016-03-31 11:20:52 -0500
+Processing by MoviesController#similar as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (director = 'Leo')[0m
+  Rendered movies/similar.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 11.7ms (Views: 9.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-31 11:20:52 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-31 11:20:52 -0500
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-31 11:20:52 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-31 11:20:52 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (71.0ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (66.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (75.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (44.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (62.8ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (73.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (74.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (55.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (79.4ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (75.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (74.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (55.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (66.5ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (65.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (65.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (60.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (64.4ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (73.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (74.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (55.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (60.7ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (73.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (74.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (54.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (75.2ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (75.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (90.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (58.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (78.3ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (83.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (82.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (40.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (41.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (77.1ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (82.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (82.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (59.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (65.6ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (82.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (82.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (59.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (84.3ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (82.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (74.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (57.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (41.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (76.5ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (83.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (82.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (58.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (41.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (75.1ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (81.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (82.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (57.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (71.1ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (83.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (82.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (59.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (74.9ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (81.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (82.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (49.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+
+
+Started GET "/movies/1/similar" for 127.0.0.1 at 2016-03-31 11:44:02 -0500
+Connecting to database specified by database.yml
+Processing by MoviesController#similar as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE (director = 'Leo')
+  Rendered movies/similar.html.haml within layouts/application (8.9ms)
+Completed 200 OK in 148.9ms (Views: 74.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-31 11:44:02 -0500
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-31 11:44:02 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-31 11:44:02 -0500
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-31 11:44:02 -0500
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2016-03-31 11:44:09 -0500
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered movies/show.html.haml within layouts/application (32.1ms)
+Completed 500 Internal Server Error in 35.7ms
+
+ActionView::Template::Error (Inconsistent indentation: 1 tab used for indentation, but the rest of the document was indented using 2 spaces.):
+    17: = link_to 'Edit', edit_movie_path(@movie)
+    18: = button_to 'Delete', movie_path(@movie), :method => :delete, :confirm => 'Are you sure?'
+    19: -if (Movie.similar(@movie).length > 0)
+    20: 	= link_to 'Find Movies With Same Director', similar_movie_path(@movie),:method => :get
+    21: -else
+    22: 	= link_to 'Find Movies With Same Director', movies_path
+    23: = link_to 'Back to movie list', movies_path
+  app/views/movies/show.html.haml:20
+
+
+  Rendered /home/jaideng123/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /home/jaideng123/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /home/jaideng123/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.4ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2016-03-31 11:44:20 -0500
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (director = 'Leo')[0m
+  Rendered movies/show.html.haml within layouts/application (7.6ms)
+Completed 200 OK in 13.9ms (Views: 12.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-31 11:44:20 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-31 11:44:20 -0500
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-31 11:44:20 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-31 11:44:20 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/1/similar" for 127.0.0.1 at 2016-03-31 11:44:23 -0500
+Processing by MoviesController#similar as HTML
+  Parameters: {"authenticity_token"=>"fDt5SPOAeWZ1oMWy3gzdqTbzF/4aDFjeNOg8RwIYuaA=", "id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (director = 'Leo')[0m
+  Rendered movies/similar.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 13.4ms (Views: 10.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-31 11:44:23 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-31 11:44:23 -0500
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-31 11:44:23 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-31 11:44:23 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (189.6ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (73.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (82.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (54.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (78.7ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (65.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (65.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (42.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-03-31 11:46:17 -0500
+Connecting to database specified by database.yml
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (8.9ms)
+Completed 200 OK in 150.5ms (Views: 52.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-31 11:46:18 -0500
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-31 11:46:18 -0500
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-31 11:46:18 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-31 11:46:18 -0500
+Served asset /application.js - 304 Not Modified (4ms)
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (88.5ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (65.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (75.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (43.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (57.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (72.2ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (65.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (57.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (55.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-03-31 11:50:19 -0500
+Connecting to database specified by database.yml
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (9.6ms)
+Completed 200 OK in 155.4ms (Views: 54.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-31 11:50:20 -0500
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-31 11:50:20 -0500
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-31 11:50:20 -0500
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-31 11:50:20 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2016-03-31 11:50:23 -0500
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (8.7ms)
+Completed 200 OK in 13.0ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-31 11:50:23 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-31 11:50:23 -0500
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-31 11:50:23 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-31 11:50:23 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/movies" for 127.0.0.1 at 2016-03-31 11:50:27 -0500
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fDt5SPOAeWZ1oMWy3gzdqTbzF/4aDFjeNOg8RwIYuaA=", "movie"=>{"title"=>"Jaiden", "director"=>"", "rating"=>"G", "release_date(1i)"=>"2016", "release_date(2i)"=>"3", "release_date(3i)"=>"31"}, "commit"=>"Save Changes"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (6.0ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 31 Mar 2016 16:50:27 UTC +00:00], ["description", nil], ["director", ""], ["rating", "G"], ["release_date", Thu, 31 Mar 2016 00:00:00 UTC +00:00], ["title", "Jaiden"], ["updated_at", Thu, 31 Mar 2016 16:50:27 UTC +00:00]]
+  [1m[35m (144.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies
+Completed 302 Found in 154.0ms (ActiveRecord: 150.2ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-03-31 11:50:27 -0500
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 7.4ms (Views: 6.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-31 11:50:27 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-31 11:50:27 -0500
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-31 11:50:27 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-31 11:50:27 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+  [1m[36m (1.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (74.9ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (74.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (74.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (43.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (57.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (60.8ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (57.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (65.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (46.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (57.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (76.3ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (65.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (65.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (43.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (65.6ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (74.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (74.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (58.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (48.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (67.1ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (81.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (66.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (49.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-01 09:43:54 -0500
+Connecting to database specified by database.yml
+
+ActionController::RoutingError (No route matches [GET] "/"):
+  actionpack (3.2.18) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.18) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.18) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.18) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.18) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.18) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.18) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.18) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.18) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.18) lib/rails/engine.rb:484:in `call'
+  railties (3.2.18) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.18) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/jaideng123/.rvm/rubies/ruby-1.9.3-p547/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/jaideng123/.rvm/rubies/ruby-1.9.3-p547/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/jaideng123/.rvm/rubies/ruby-1.9.3-p547/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/jaideng123/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (5.2ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-04-01 09:44:00 -0500
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (8.9ms)
+Completed 200 OK in 229.4ms (Views: 138.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-01 09:44:01 -0500
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-01 09:44:01 -0500
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-01 09:44:01 -0500
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-01 09:44:01 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2016-04-01 09:44:05 -0500
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (director = 'Leo')[0m
+  Rendered movies/show.html.haml within layouts/application (7.9ms)
+Completed 200 OK in 21.4ms (Views: 17.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-01 09:44:05 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-01 09:44:05 -0500
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-01 09:44:05 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-01 09:44:05 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/movies/1/similar" for 127.0.0.1 at 2016-04-01 09:44:07 -0500
+Processing by MoviesController#similar as HTML
+  Parameters: {"authenticity_token"=>"rt/ciIWNTpkpSbOiflCkPZ9gpuXmTyvqmC9BaivtAoA=", "id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (director = 'Leo')[0m
+  Rendered movies/similar.html.haml within layouts/application (34.4ms)
+Completed 200 OK in 41.5ms (Views: 39.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-01 09:44:07 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-01 09:44:07 -0500
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-01 09:44:07 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-01 09:44:07 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+Connecting to database specified by database.yml
+  [1m[36m (3.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (61.3ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (66.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (74.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (57.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (177.0ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (65.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (66.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (52.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (194.7ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (65.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (67.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (46.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (190.1ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (74.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (65.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (41.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (172.3ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (65.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (66.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (37.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (57.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (167.7ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (66.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (82.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (44.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (57.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (178.7ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (66.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (65.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (60.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (167.7ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (66.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (66.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (51.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (160.9ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (65.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (65.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (45.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (183.1ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (66.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (57.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (50.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (67.4ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (73.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (57.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (79.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (57.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (164.7ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (73.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (74.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (40.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (166.8ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (74.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (66.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (40.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (155.4ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (74.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (74.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (40.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (170.8ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (75.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (73.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (39.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (155.9ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (65.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (57.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (38.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (41.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (138.1ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (65.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (66.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (41.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (41.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (171.7ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (58.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (65.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (49.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (168.2ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (57.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (65.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (44.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (169.8ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (65.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (59.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (39.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (104.0ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (57.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (59.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (37.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (48.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (87.1ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (79.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (138.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (107.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (79.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (164.6ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (57.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (58.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (40.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (71.5ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (66.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (58.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (41.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (177.4ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (57.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (57.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (44.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (69.8ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (65.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (65.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (49.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (73.1ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (74.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (82.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (61.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (57.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (153.7ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (65.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (74.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (44.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (60.5ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (81.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (74.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (53.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (57.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (168.1ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (65.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (66.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (43.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (169.8ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (66.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (65.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (44.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (166.1ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (66.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (74.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (46.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (166.5ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (65.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (65.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (43.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.6ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (143.8ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (57.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (66.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (45.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (178.5ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (57.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (65.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (44.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (168.6ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (73.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (67.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (46.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-01 11:01:22 -0500
+Connecting to database specified by database.yml
+
+ActionController::RoutingError (No route matches [GET] "/"):
+  actionpack (3.2.18) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.18) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.18) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.18) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.18) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.18) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.18) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.18) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.18) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.18) lib/rails/engine.rb:484:in `call'
+  railties (3.2.18) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.18) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/jaideng123/.rvm/rubies/ruby-1.9.3-p547/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/jaideng123/.rvm/rubies/ruby-1.9.3-p547/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/jaideng123/.rvm/rubies/ruby-1.9.3-p547/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/jaideng123/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.4ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-04-01 11:01:33 -0500
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (7.2ms)
+Completed 200 OK in 195.5ms (Views: 115.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-01 11:01:33 -0500
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-01 11:01:33 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-01 11:01:33 -0500
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-01 11:01:33 -0500
+Served asset /jquery.js - 304 Not Modified (2ms)
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (170.0ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (57.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (57.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (39.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (166.9ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (57.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (65.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (46.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (57.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (180.4ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (57.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (57.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (46.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (158.5ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (57.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (57.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (39.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (163.8ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (66.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (65.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (42.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (154.4ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (59.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (57.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (46.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (165.5ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (65.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (74.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (46.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (167.7ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (66.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (66.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (42.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (72.3ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (67.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (66.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (53.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (63.8ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (74.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (66.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (42.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (198.9ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (73.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (74.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (42.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (160.3ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (57.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (57.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (38.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-01 11:21:13 -0500
+Connecting to database specified by database.yml
+
+ActionController::RoutingError (No route matches [GET] "/"):
+  actionpack (3.2.18) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.18) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.18) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.18) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.18) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.18) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.18) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.18) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.18) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.18) lib/rails/engine.rb:484:in `call'
+  railties (3.2.18) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.18) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/jaideng123/.rvm/rubies/ruby-1.9.3-p547/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/jaideng123/.rvm/rubies/ruby-1.9.3-p547/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/jaideng123/.rvm/rubies/ruby-1.9.3-p547/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/jaideng123/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.8ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-04-01 11:21:20 -0500
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (7.3ms)
+Completed 200 OK in 101.9ms (Views: 19.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-01 11:21:21 -0500
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-01 11:21:21 -0500
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-01 11:21:21 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-01 11:21:21 -0500
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-01 11:21:39 -0500
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-01 11:21:39 -0500
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-01 11:21:48 -0500
+Served asset /application.css - 200 OK (0ms)
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (170.9ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (65.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (65.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (41.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (149.9ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (82.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (75.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (42.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (70.4ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (65.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (67.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (41.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (156.5ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (65.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (66.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (44.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (126.8ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (57.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (65.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (45.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (181.7ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (73.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (74.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (63.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (167.5ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (57.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (58.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (38.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (175.3ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (57.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (74.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (43.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (167.2ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (73.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (65.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (40.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (166.6ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (57.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (58.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (37.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (165.8ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (57.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (57.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (38.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (172.5ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (65.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (65.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (44.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (49.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (157.9ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (57.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (65.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (43.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2016-04-01 11:34:01 -0500
+Connecting to database specified by database.yml
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (33.6ms)
+Completed 200 OK in 77.5ms (Views: 77.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-01 11:34:01 -0500
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-01 11:34:01 -0500
+Served asset /jquery.js - 304 Not Modified (34ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-01 11:34:01 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-01 11:34:01 -0500
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-01 11:35:10 -0500
+Served asset /application.css - 200 OK (0ms)
+
+
+Started POST "/movies" for 127.0.0.1 at 2016-04-01 11:35:41 -0500
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TIRDj03Edgm5iVN4d8Q56AklUJJNp73RcMFIlWl98sU=", "movie"=>{"title"=>"", "director"=>"", "rating"=>"G", "release_date(1i)"=>"2016", "release_date(2i)"=>"4", "release_date(3i)"=>"1"}, "commit"=>"Save Changes"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (29.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 01 Apr 2016 16:35:41 UTC +00:00], ["description", nil], ["director", ""], ["rating", "G"], ["release_date", Fri, 01 Apr 2016 00:00:00 UTC +00:00], ["title", ""], ["updated_at", Fri, 01 Apr 2016 16:35:41 UTC +00:00]]
+  [1m[36m (160.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies
+Completed 302 Found in 273.8ms (ActiveRecord: 191.7ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-04-01 11:35:42 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered movies/index.html.haml within layouts/application (10.8ms)
+Completed 200 OK in 23.4ms (Views: 16.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-01 11:35:42 -0500
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-01 11:35:42 -0500
+Served asset /jquery.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-01 11:35:42 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-01 11:35:42 -0500
+Served asset /application.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-01 11:35:42 -0500
+Served asset /application.css - 200 OK (0ms)
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (158.2ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (57.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (58.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (39.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (41.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (166.8ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (49.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (50.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (32.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (180.5ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (57.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (58.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (43.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-04-01 11:40:10 -0500
+Connecting to database specified by database.yml
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (10.6ms)
+Completed 200 OK in 200.8ms (Views: 80.1ms | ActiveRecord: 29.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-01 11:40:11 -0500
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-01 11:40:11 -0500
+Served asset /jquery.js - 200 OK (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-01 11:40:11 -0500
+Served asset /jquery_ujs.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-01 11:40:11 -0500
+Served asset /application.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-01 11:40:12 -0500
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2016-04-01 11:40:12 -0500
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (director = 'Leo')[0m
+  Rendered movies/show.html.haml within layouts/application (8.8ms)
+Completed 200 OK in 18.9ms (Views: 14.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-01 11:40:12 -0500
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-01 11:40:12 -0500
+Served asset /jquery.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-01 11:40:12 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-01 11:40:12 -0500
+Served asset /application.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-01 11:40:13 -0500
+Served asset /application.css - 200 OK (0ms)
+
+
+Started DELETE "/movies/1" for 127.0.0.1 at 2016-04-01 11:40:52 -0500
+Processing by MoviesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"TIRDj03Edgm5iVN4d8Q56AklUJJNp73RcMFIlWl98sU=", "id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.3ms)[0m  DELETE FROM "movies" WHERE "movies"."id" = ?  [["id", 1]]
+  [1m[36m (149.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies
+Completed 302 Found in 159.7ms (ActiveRecord: 155.2ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-04-01 11:40:53 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered movies/index.html.haml within layouts/application (7.7ms)
+Completed 200 OK in 19.7ms (Views: 16.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-01 11:40:53 -0500
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-01 11:40:53 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-01 11:40:53 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-01 11:40:53 -0500
+Served asset /application.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-01 11:40:53 -0500
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/movies/4" for 127.0.0.1 at 2016-04-01 11:40:57 -0500
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE (director = '')
+  Rendered movies/show.html.haml within layouts/application (28.3ms)
+Completed 200 OK in 33.3ms (Views: 31.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-01 11:40:57 -0500
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-01 11:40:57 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-01 11:40:57 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-01 11:40:57 -0500
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-01 11:40:58 -0500
+Served asset /application.css - 200 OK (0ms)
+
+
+Started DELETE "/movies/4" for 127.0.0.1 at 2016-04-01 11:41:00 -0500
+Processing by MoviesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"TIRDj03Edgm5iVN4d8Q56AklUJJNp73RcMFIlWl98sU=", "id"=>"4"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "movies" WHERE "movies"."id" = ?[0m  [["id", 4]]
+  [1m[35m (159.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies
+Completed 302 Found in 162.3ms (ActiveRecord: 159.4ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-04-01 11:41:00 -0500
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 14.6ms (Views: 12.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-01 11:41:00 -0500
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-01 11:41:00 -0500
+Served asset /jquery.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-01 11:41:00 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-01 11:41:00 -0500
+Served asset /application.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-01 11:41:00 -0500
+Served asset /application.css - 200 OK (0ms)
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (164.0ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "director" varchar(255)) [0m
+  [1m[35m (57.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (49.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (43.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160331145531')[0m
+  [1m[35m (40.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
